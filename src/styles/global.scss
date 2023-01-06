@@ -1,0 +1,373 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+}
+// ant design customization
+.ant-collapse-expand-icon {
+    margin-right: 10px;
+}
+.select-wrap {
+    .ant-select {
+        &.ant-select-single {
+            .ant-select-selector {
+                @apply rounded-md;
+            }
+        }
+    }
+}
+.ant-input-group-wrapper {
+    &.ant-input-search {
+        > .ant-input-group {
+            > .ant-input-group-addon {
+                &:last-child {
+                    .ant-input-search-button {
+                        @apply rounded-tr-md rounded-br-md border-l-0;
+                    }
+                }
+            }
+            > .ant-input {
+                &:first-child {
+                    @apply rounded-tl-md rounded-bl-md;
+                }
+            }
+        }
+    }
+}
+.date-wrapper {
+    .ant-picker {
+        @apply rounded-md;
+    }
+}
+.ant-table {
+    table {
+        @apply border-l-1 border-r-1 border-t-1 border-gray-100;
+        tr {
+            &:nth-child(even) {
+                @apply bg-white-200;
+            }
+        }
+    }
+}
+.ant-pagination {
+    .ant-pagination-item {
+        @apply rounded-md;
+    }
+    .ant-pagination-item-active {
+        &:hover {
+            a {
+                @apply text-white;
+            }
+        }
+        a {
+            @apply text-white;
+        }
+    }
+    .ant-pagination-next{
+        a {
+            @apply border-solid border-1 p-2 bg-[#464FB2] text-[#FFFFFF] rounded-md;
+        }
+        button {
+            @apply rounded-md flex items-center justify-center bg-white-300;
+        }
+    }
+    .ant-pagination-prev {
+        a {
+            @apply border-solid border-1 p-2 bg-[#F9F8FF] text-[#4A5061] rounded-md;
+        }
+        button {
+            @apply rounded-md flex items-center justify-center bg-white-300;
+        }
+    }
+    .ant-pagination-total-text {
+        position: absolute;
+        left: 0;
+    }
+}
+.ant-table {
+    table {
+        @apply mobile-down:border-none;
+        thead {
+            @apply mobile-down:hidden;
+            th {
+                @apply mobile-down:block mobile-down:w-full;
+            }
+        }
+        tbody,
+        tr,
+        td {
+            @apply mobile-down:block mobile-down:w-full;
+        }
+        tr {
+            @apply mobile-down:mb-4 mobile-down:border-gray-100 mobile-down:border-1 mobile-down:rounded-md;
+        }
+    }
+}
+.form-wrapper {
+    .ant-checkbox-wrapper {
+        @apply flex items-center;
+        .ant-checkbox {
+            + span {
+                @apply ml-2 w-full text-sm font-medium  text-black-charcol p-0;
+            }
+        }
+    }
+    .ant-input-affix-wrapper {
+        @apply mt-1 relative rounded-md shadow-sm border  border-gray-100 flex h-48;
+        .ant-input-prefix {
+            @apply border-r pr-2 border-gray-100 mr-2 flex items-center pointer-events-none;
+        }
+        .ant-input {
+            &:focus {
+                -webkit-box-shadow: 0 0 0 1000px white inset !important;
+            }
+            -webkit-box-shadow: 0 0 0 1000px white inset !important;
+            @apply sm:text-sm;
+        }
+    }
+}
+.login-wrapper__left {
+    .ant-btn-default {
+        @apply text-blue-400 w-full mt-20  border border-primary-border-color font-bold py-3 px-4 rounded mr-5 h-48;
+    }
+    .ant-btn-primary {
+        @apply bg-blue-400 w-full mt-20 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded h-48;
+    }
+    .uploadbar_new__roles {
+        .ant-btn-primary {
+             width:auto !important;
+        }
+    }
+}
+
+.ant-select {
+    .ant-select-selection-item {
+        @apply relative text-base text-black-charcol min-w-106 pr-4;
+    }
+    .ant-select-selection-item {
+        .nav-icon {
+            @apply hidden;
+        }
+    }
+}
+.ant-select-dropdown {
+    &.ant-select-dropdown-placement-bottomLeft {
+        @apply rounded-md;
+    }
+}
+
+.sellerBroker {
+    .ant-select-dropdown {
+    @apply z-10;
+    &.ant-select-dropdown-placement-bottomLeft {
+        @apply rounded-md z-10;
+    }
+}
+}
+svg {
+    vertical-align: baseline;
+}
+.form-block {
+    .ant-input {
+        @apply bg-g-pink-100 h-48 rounded-md text-black-charcol text-xs;
+    }
+    .ant-select {
+        &:not(.ant-select-customize-input) {
+            .ant-select-selector {
+                @apply bg-g-pink-100 h-48 rounded-md text-black-charcol text-xs items-center;
+                .ant-select-selection-search-input{
+                    @apply h-48;
+                }
+                .ant-select-selection-item {
+                    @apply text-xs;
+                }
+            }
+        }
+    }
+    .ant-picker {
+        @apply bg-g-pink-100 h-48 rounded-md text-black-charcol text-xs w-full;
+        .ant-picker-input {
+            > input {
+                @apply text-xs;
+            }
+        }
+    }
+    textarea {
+        &.ant-input {
+            @apply resize-none h-auto;
+        }
+    }
+    .ant-upload {
+        &.ant-upload-drag {
+            @apply rounded-md bg-blue-200 border border-dashed border-g-pink-300;
+        }
+    }
+}
+.auth__image__wrapper {
+    & > span {
+        @apply h-full relative;
+
+    }
+}
+.ant-drawer {
+    @apply mobile-up:hidden;
+    .ant-drawer-wrapper-body {
+        .ant-drawer-header {
+            @apply absolute -right-0 p-0 w-10 h-10 justify-center items-center rounded-tr-md rounded-br-md top-6 border-b-0 bg-blue-200;
+            .ant-drawer-header-title {
+                @apply justify-center;
+                .ant-drawer-close {
+                    @apply m-0;
+                }
+            }
+        }
+    }
+}
+.ant-steps {
+    .ant-steps-item-icon,
+    .ant-steps-item-content {
+        @apply block;
+        .ant-steps-item-title {
+            @apply capitalize text-xs leading-9;
+            &:after {
+                @apply top-[-16px];
+            }
+        }
+    }
+    .ant-steps-item-icon {
+        @apply w-21 h-21  leading-5 ml-2 mb-2 bg-blue-400;
+        .ant-steps-icon {
+            @apply text-white text-xs -top-0.5;
+        }
+    }
+    .ant-steps-item-finish {
+        .ant-steps-item-icon {
+            @apply bg-blue-400; 
+            .ant-steps-icon {
+                @apply text-white;
+            }
+        }
+    }
+
+    .ant-steps-item-process {
+        .ant-steps-item-icon {
+            .ant-steps-icon {
+                @apply hidden;
+            }
+        }
+    }
+
+    .ant-steps-item-wait {
+        .ant-steps-item-icon {
+            .ant-steps-icon {
+                @apply hidden;
+            }
+        }
+    }
+}
+.file-step {
+    .downloaded-block {
+        @apply w-full;
+    }
+}
+.vertical-stepbar {
+    .ant-steps-vertical {
+        &.ant-steps-dot {
+            .ant-steps-item-icon {
+                @apply bg-blue-400;
+            }
+        }
+    }
+    .ant-steps {
+        .ant-steps-item-content {
+            .ant-steps-item-title {
+                @apply text-sm;
+            }
+        }
+    }
+    .ant-steps-item-finish {
+        .ant-steps-item-icon {
+            @apply bg-blue-400 text-xs
+        }
+    }
+}
+.workspace-wrapper {
+    .ant-list {
+        &.ant-list-bordered {
+            @apply border border-blue-100;
+        }
+        .ant-list-header {
+            @apply bg-white-300;
+        }
+        &.ant-list-bordered {
+            &.ant-list-sm {
+                .ant-list-header,
+                .ant-list-item {
+                    @apply p-4 font-medium;
+                    &:nth-child(even) {
+                        @apply bg-white-200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.preview-modal {
+    // .ant-modal {
+        width: 60vw !important;
+        // max-height: 90vh !important;
+        // overflow: auto;
+    // }
+
+    .doc__viewer {
+        max-height: 600px!important;
+        overflow-y: auto;
+    }
+}
+.countyModal{
+            .ant-modal-content{
+                @apply rounded-2xl h-[calc(100vh-60%)] z-50;
+                .ant-modal-header{
+                    @apply rounded-t-2xl pl-12 pr-12;
+                    .ant-modal-title{
+                        @apply text-black text-xl font-bold;
+                    }
+                }
+                .ant-modal-body{
+                    @apply h-[calc(100%-16%)];
+                }
+            }
+        }
+
+.agentFormModal{
+            .ant-modal-content{
+                @apply rounded-2xl h-[calc(100vh-150px)] z-50;
+                .ant-modal-header{
+                    @apply rounded-t-2xl pl-12 pr-12;
+                    .ant-modal-title{
+                        @apply text-black text-xl font-bold;
+                    }
+                }
+                .ant-modal-body{
+                    @apply h-[calc(100%-10%)] overflow-y-scroll;
+                }
+            }
+}
+.lenderFormModal {
+    .ant-modal-content {
+        @apply rounded-2xl h-[calc(100vh-60%)] z-50;
+        .ant-modal-header {
+            @apply rounded-t-2xl pl-12 pr-12;
+            .ant-modal-title {
+                @apply text-black text-xl font-bold py-4;
+            }
+        }
+        .ant-modal-body {
+            @apply h-[calc(100%-10%)] overflow-y-scroll;
+        }
+    }
+}
